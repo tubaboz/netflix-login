@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="form-container">
+        <header id="form-header">
+            <h1 id="form-title">NET<span>FLIX</span></h1>
+        </header>
+        <section id="login-form-container">
+            <div id="login-form">
+                <form action="/login" method="POST">
+                <div class="input-box">
+                    <input type="text" name="username" id="username" placeholder="Username"><br>
+                </div>
+                <div class="input-box">
+                    <input type="number" name="password" id="password" placeholder="Password">
+                </div>
+                <div id="form-submit">
+                    <button type="submit" id="submit" value="login">Log In</button>
+
+
+                </div>
+
+             </form>
+
+             <h1>{{info}}</h1>
+            </div>
+        </section>
+
+
+    </div>
+    
+</body>
+</html>
