@@ -7,9 +7,9 @@ def index():
     return render_template("login.html")
 
 users = {
-    "tugba": "12345",
-    "linda": "6789",
-    "thomas": "nl234"
+    "tugba.bozteke@gmail.com": "12345",
+    "0618895678": "6789",
+    "john@gmail.com": "nl234"
 }
 
 @app.route("/login", methods=["POST", "GET"])
@@ -20,9 +20,9 @@ def login():
         if users[user] == password:
             return render_template("home.html", name = user)
         else:
-            return render_template("login.html", info="invalid password")
+            return render_template("login.html", feedback="Invalid password. Please try again.")
     else:
-        return render_template ("login.html", info="invalid user")
+        return render_template ("login.html", feedback="Sorry, We can't find an account with this email adress. Please try again.")
 
 if __name__ == "__main__":
     app.run(debug = True)
