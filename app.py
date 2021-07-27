@@ -14,11 +14,11 @@ users = {
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
-    user = request.form["username"]
-    password = request.form["password"]
+    user = request.form.get("username")
+    password = request.form.get("password")
     if user in users:
         if users[user] == password:
-            return render_template("home.html", name = user)
+            return render_template("home.html")
         else:
             return render_template("login.html", feedback="Invalid password. Please try again.")
     else:
